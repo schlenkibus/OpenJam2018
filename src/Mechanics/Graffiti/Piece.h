@@ -2,7 +2,7 @@
 #include <vector>
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/Graphics/Image.hpp>
-#include "details/KeyFrame.h"
+#include "../details/KeyFrame.h"
 
 class Piece {
 public:

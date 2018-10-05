@@ -13,6 +13,7 @@ BlackBook::BlackBook() {
 
 void BlackBook::draw(sf::RenderWindow &window) {
     window.draw(sprite);
+
     window.draw(&lines[0], lines.size(), sf::LinesStrip);
     sprite.setTexture(texture);
 }

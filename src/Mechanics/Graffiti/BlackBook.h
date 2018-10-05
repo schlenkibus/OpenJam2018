@@ -1,7 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
-#include "../GameObject.h"
+#include "../../GameObject.h"
 
 class BlackBook : public GameObject {
 public:
