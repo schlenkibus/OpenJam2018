@@ -23,10 +23,6 @@ void Piece::clear() {
     m_textures.clear();
 }
 
-const std::vector<sf::Texture>& Piece::getTextures() {
-    return m_textures;
-}
-
 void Piece::addTexture(std::vector<sf::Vertex>& vector, sf::Color& c) {
     sf::RenderTexture tex;
     tex.create(500, 400);
@@ -38,4 +34,8 @@ void Piece::addTexture(std::vector<sf::Vertex>& vector, sf::Color& c) {
 
 const sf::Texture &Piece::getLastTexture() {
     return m_textures.back();
+}
+
+const std::vector<sf::Texture> &Piece::getTextures() {
+    return m_textures;
 }

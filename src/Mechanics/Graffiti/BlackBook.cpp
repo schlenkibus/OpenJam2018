@@ -6,6 +6,7 @@
 #include "BlackBook.h"
 #include "../../Application.h"
 #include "BrushPainter.h"
+#include "PieceStorage.h"
 
 BlackBook::BlackBook() {
     auto size = Application::get().getWindow().getRenderWindow().getSize();
@@ -63,6 +64,7 @@ void BlackBook::clear() {
     m_piecePieces.clear();
 }
 
-void BlackBook::save() {
-
+void BlackBook::save(int slot) {
+    m_currentLine.clear();
+    PieceStorage::get().store(std::to_string(slot), m_currentPiece);
 }

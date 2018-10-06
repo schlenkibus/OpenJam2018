@@ -11,8 +11,7 @@ public:
     void update(float deltaTime) override;
     bool onEvent(sf::Event& e) override;
     void clear();
-    void save();
-
+    void save(int slot);
 protected:
     Piece m_currentPiece;
     std::vector<sf::Vertex> m_currentLine;
