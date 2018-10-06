@@ -12,6 +12,9 @@ Button::Button(sf::Vector2f pos, std::string text,
         m_updateCallBack(std::move(updateCallBack)) {
     m_text.setString(text);
     m_text.setPosition(pos);
+    m_text.setFillColor(sf::Color::Magenta);
+    m_text.setOutlineThickness(2);
+    m_text.setOutlineColor(sf::Color::Black);
     m_shape.setPosition(m_text.getPosition());
     m_shape.move(0, m_text.getLocalBounds().height / 3.f);
     fitToText();

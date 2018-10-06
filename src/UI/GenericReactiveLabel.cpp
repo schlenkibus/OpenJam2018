@@ -1,3 +1,5 @@
+#include <utility>
+
 //
 // Created by justus on 24.08.18.
 //
@@ -6,7 +8,7 @@
 #include "../Tools/ResourceManager.h"
 
 GenericReactiveLabel::GenericReactiveLabel(std::function<void(float, Label&)> cb, sf::Vector2f pos) :
-Label(pos, ""), m_cb(cb) {
+Label(pos, ""), m_cb(std::move(cb)) {
 
 }
 

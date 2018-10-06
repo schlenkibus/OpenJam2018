@@ -8,6 +8,7 @@
 #include "../UI/Overlay/Overlay.h"
 #include "../DebugScene.h"
 #include "../Application.h"
+#include "../Ingame/Scenery/BlackBookScene.h"
 
 MenuScene::MenuScene(GameWindow& parent) : GameScene(parent) {
     m_gameObjects.push_back(std::make_unique<Overlay>());
@@ -43,12 +44,12 @@ MenuScene::MenuScene(GameWindow& parent) : GameScene(parent) {
             return false;
         }, nullptr));
 
-        overlay->addChild(new Button(sf::Vector2f(300, 400), "Debug", [&](sf::Event&e, Button& b){
+        overlay->addChild(new Button(sf::Vector2f(300, 400), "BlackBook", [&](sf::Event&e, Button& b){
             if(e.type == sf::Event::MouseButtonReleased &&
                e.mouseButton.button == sf::Mouse::Left) {
                 if(b.containsPosition(m_parent.getMousePosition()))
                 {
-                    m_parent.setScene(std::make_shared<DebugScene>(Application::get().getWindow()));
+                    m_parent.setScene(std::make_shared<BlackBookScene>(Application::get().getWindow()));
                     return true;
                 }
             }
